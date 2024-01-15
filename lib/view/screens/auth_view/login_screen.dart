@@ -27,7 +27,7 @@ class LoginScreen extends StatelessWidget {
 }
 Widget _buildLoginView(BuildContext context,LoginController controller){
   return Container(
-    margin: EdgeInsets.only(top:42),
+    margin: EdgeInsets.only(top:42),      
     child: ListView(
       children: [ Column(
         children: [
