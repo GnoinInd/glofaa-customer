@@ -25,9 +25,48 @@ class LoginScreen extends StatelessWidget {
         onPageBuilder: (BuildContext context,LoginController controller)=>_buildLoginView(context,controller));
   }
 }
+
+
+class BottomSheetExample extends StatelessWidget {
+  const BottomSheetExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: ElevatedButton(
+        child: const Text('showModalBottomSheet'),
+        onPressed: () {
+          showModalBottomSheet<void>(
+            context: context,
+            builder: (BuildContext context) {
+              return Container(
+                height: 200,
+                color: Colors.amber,
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      const Text('Welcome to Modal Bottom Sheet'),
+                      ElevatedButton(
+                        child: const Text('Close BottomSheet'),
+                        onPressed: () => Navigator.pop(context),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            },
+          );
+        },
+      ),
+    );
+  }
+}
+
 Widget _buildLoginView(BuildContext context,LoginController controller){
   return Container(
-    margin: EdgeInsets.only(top:42),      
+    margin: EdgeInsets.only(top:42),
     child: ListView(
       children: [ Column(
         children: [
@@ -142,11 +181,114 @@ Widget _buildNumberRow(BuildContext context,LoginController controller){
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
-              CircleAvatar(
-                  child: Image.asset(ImageResource.instance.flagImage,fit: BoxFit.cover,),
-              radius: 10,),
+              InkWell(
+                onTap: (){
+                  showModalBottomSheet<void>(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return SizedBox(
+                        height: 353,
+                        width: double.infinity,
+                        child: Column(
+                          children: [
+                            Center(
+                              child: Container(
+                                margin: EdgeInsets.only(top:5),
+                                height:5 ,
+                                width: 58,
+                                color: ColorResource.grey,
+                              ),
+                            ),
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: Padding(
+                                padding: EdgeInsets.only(left:16,top: 15,bottom: 4),
+                                child: Text(
+                                  'Select a country',style: StyleResource.instance.styleBold(DimensionResource.fontSizeLarge, ColorResource.black),
+                                ),
+                              ),
+                            ),
+                            Divider(),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 16,top: 10),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Image.asset(ImageResource.instance.australia),
+                                      SizedBox(width: MediaQuery.of(context).size.width*0.03,),
+                                      Text("Australia",style: StyleResource.instance.styleBold(DimensionResource.fontSizeLarge, ColorResource.black),),
+                                      SizedBox(width: MediaQuery.of(context).size.width*0.01,),
+
+                                      Text("+61",style: StyleResource.instance.styleBold(DimensionResource.fontSizeSmallTo, ColorResource.grey),),
+                                    ],
+                                  ), SizedBox(height: MediaQuery.of(context).size.height*0.01,),
+                                  Row(
+                                    children: [
+                                      Image.asset(ImageResource.instance.india91),
+                                      SizedBox(width: MediaQuery.of(context).size.width*0.03,),
+                                      Text("India",style: StyleResource.instance.styleBold(DimensionResource.fontSizeLarge, ColorResource.black),),
+                                      SizedBox(width: MediaQuery.of(context).size.width*0.01,),
+
+                                      Text("+91",style: StyleResource.instance.styleBold(DimensionResource.fontSizeSmallTo, ColorResource.grey),),
+                                    ],
+                                  ), SizedBox(height: MediaQuery.of(context).size.height*0.01,),
+                                  Row(
+                                    children: [
+                                      Image.asset(ImageResource.instance.saudi),
+                                      SizedBox(width: MediaQuery.of(context).size.width*0.03,),
+                                      Text("Saudi Arabia",style: StyleResource.instance.styleBold(DimensionResource.fontSizeLarge, ColorResource.black),),
+                                      SizedBox(width: MediaQuery.of(context).size.width*0.01,),
+
+                                      Text("+966",style: StyleResource.instance.styleBold(DimensionResource.fontSizeSmallTo, ColorResource.grey),),
+                                    ],
+                                  ), SizedBox(height: MediaQuery.of(context).size.height*0.01,),
+                                  Row(
+                                    children: [
+                                      Image.asset(ImageResource.instance.singapore),
+                                      SizedBox(width: MediaQuery.of(context).size.width*0.03,),
+                                      Text("Singapore",style: StyleResource.instance.styleBold(DimensionResource.fontSizeLarge, ColorResource.black),),
+                                      SizedBox(width: MediaQuery.of(context).size.width*0.01,),
+
+                                      Text("+65",style: StyleResource.instance.styleBold(DimensionResource.fontSizeSmallTo, ColorResource.grey),),
+                                    ],
+                                  ), SizedBox(height: MediaQuery.of(context).size.height*0.01,),
+                                  Row(
+                                    children: [
+                                      Image.asset(ImageResource.instance.arab),
+                                      SizedBox(width: MediaQuery.of(context).size.width*0.03,),
+                                      Text("United Arab Emirates",style: StyleResource.instance.styleBold(DimensionResource.fontSizeLarge, ColorResource.black),),
+                                      SizedBox(width: MediaQuery.of(context).size.width*0.01,),
+
+                                      Text("+971",style: StyleResource.instance.styleBold(DimensionResource.fontSizeSmallTo, ColorResource.grey),),
+                                    ],
+                                  ), SizedBox(height: MediaQuery.of(context).size.height*0.01,),
+                                  Row(
+                                    children: [
+                                      Image.asset(ImageResource.instance.unitedstates),
+                                      SizedBox(width: MediaQuery.of(context).size.width*0.03,),
+                                      Text("United States",style: StyleResource.instance.styleBold(DimensionResource.fontSizeLarge, ColorResource.black),),
+                                      SizedBox(width: MediaQuery.of(context).size.width*0.01,),
+
+                                      Text("+91",style: StyleResource.instance.styleBold(DimensionResource.fontSizeSmallTo, ColorResource.grey),),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            )
+
+                          ],
+                        ),
+                      );
+                    },
+                  );
+                },
+                child: CircleAvatar(
+                    child: Image.asset(ImageResource.instance.flagImage,fit: BoxFit.fill,),
+                radius: 10,),
+              ),
               const SizedBox(width: 5),
-              Text("+91",style: StyleResource.instance.styleRegular(DimensionResource.fontSizeSmallTo, ColorResource.blueColor),)
+              Text("+91", style: StyleResource.instance.styleRegular(DimensionResource.fontSizeSmallTo, ColorResource.blueColor),)
             ],
           ),),
         Expanded(

@@ -11,6 +11,8 @@ class ColorResource {
 
   static const Color transparent = Color(0x00ffffff);
   static const Color glofalightblue = Color(0xff03A0D10A);
+  static const Color seeAllColor = Color(0xff03A0D1);
+  static const Color pestBlue = Color(0xff77DCE53D);
 
   static const Color textButtonColor = Color(0xffEE682A);
   static const Color mainColor = Color(0xff882B97);
