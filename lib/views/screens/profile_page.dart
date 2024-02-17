@@ -5,7 +5,7 @@ import 'package:device_preview/device_preview.dart';
 void main() => runApp(
       DevicePreview(
         enabled: true,
-        builder: (context) => MyApp(), // Wrap your app
+        builder: (context) => const MyApp(), // Wrap your app
       ),
     );
 
@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFF018297),
+          backgroundColor: const Color(0xFF018297),
           toolbarHeight: 112,
           title: Padding(
             padding: const EdgeInsets.only(top: 18),
@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text(
+                    const Text(
                       'Hey! sagar pandey',
                       style: TextStyle(
                         color: Colors.white,
@@ -53,17 +53,17 @@ class HomePage extends StatelessWidget {
                         height: 0,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 4,
                     ),
                     Image.asset(
                         'assets/images/Instagram_Verification_Badge.png')
                   ],
                 ),
-                SizedBox(height: 7.5),
+                const SizedBox(height: 7.5),
                 Row(
                   children: [
-                    Text(
+                    const Text(
                       'kumar@gmail.com',
                       style: TextStyle(
                         color: Colors.white,
@@ -73,14 +73,14 @@ class HomePage extends StatelessWidget {
                         height: 0,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 220,
                     ),
                     SvgPicture.asset('assets/svg_images/pencil.svg'),
                   ],
                 ),
-                SizedBox(height: 7.5),
-                Text(
+                const SizedBox(height: 7.5),
+                const Text(
                   '+91 6201983030',
                   style: TextStyle(
                     color: Colors.white,
@@ -90,7 +90,7 @@ class HomePage extends StatelessWidget {
                     height: 0,
                   ),
                 ),
-                SizedBox(height: 6),
+                const SizedBox(height: 6),
               ],
             ),
           ),
@@ -103,7 +103,7 @@ class HomePage extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   height: 52,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
@@ -128,14 +128,14 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                              padding: const EdgeInsets.only(top: 4),
+                              padding: EdgeInsets.only(top: 4),
                               child: Text(
                                 'Add/Verify your Email',
                                 style: TextStyle(
@@ -165,11 +165,11 @@ class HomePage extends StatelessWidget {
                             width: 104,
                             height: 24,
                             decoration: ShapeDecoration(
-                              color: Color(0xFF018297),
+                              color: const Color(0xFF018297),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(5)),
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 'Update',
                                 style: TextStyle(
@@ -188,7 +188,7 @@ class HomePage extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   height: 52,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
@@ -213,14 +213,14 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                              padding: const EdgeInsets.only(top: 4),
+                              padding: EdgeInsets.only(top: 4),
                               child: Text(
                                 'Register As Partner',
                                 style: TextStyle(
@@ -250,11 +250,11 @@ class HomePage extends StatelessWidget {
                             width: 104,
                             height: 24,
                             decoration: ShapeDecoration(
-                              color: Color(0xFF018297),
+                              color: const Color(0xFF018297),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(5)),
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 'Update',
                                 style: TextStyle(
@@ -273,7 +273,7 @@ class HomePage extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   height: 220,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
@@ -287,9 +287,9 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      SizedBox(height: 15),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 12),
+                      const SizedBox(height: 15),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 12),
                         child: Text(
                           'Account Setting',
                           style: TextStyle(
@@ -301,7 +301,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.only(left: 12),
@@ -311,37 +311,37 @@ class HomePage extends StatelessWidget {
                                 context,
                                 'assets/svg_images/my_profile.svg', // Replace with your SVG asset path
                                 'Edit profile',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/my_wallet.svg', // Replace with your SVG asset path
                                 'My wallet',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/manage_addresses.svg', // Replace with your SVG asset path
                                 'Manage Addresses',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/select_languages.svg', // Replace with your SVG asset path
                                 'Select Languages',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/notification_settings.svg', // Replace with your SVG asset path
                                 'Notification Settings',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                             ],
                           ),
                         ),
@@ -352,7 +352,7 @@ class HomePage extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   height: 250,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
@@ -366,9 +366,9 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      SizedBox(height: 15),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 12),
+                      const SizedBox(height: 15),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 12),
                         child: Text(
                           'My Activity',
                           style: TextStyle(
@@ -380,7 +380,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.only(left: 12),
@@ -390,44 +390,44 @@ class HomePage extends StatelessWidget {
                                 context,
                                 'assets/svg_images/scheduled_booking.svg', // Replace with your SVG asset path
                                 'Scheduled Booking',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/my_booking.svg', // Replace with your SVG asset path
                                 'My Booking',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/my_subscription.svg', // Replace with your SVG asset path
                                 'My Subscription',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/reviews.svg', // Replace with your SVG asset path
                                 'Reviews',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/question_answers.svg', // Replace with your SVG asset path
                                 'Question & Answers',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/my_rating.svg', // Replace with your SVG asset path
                                 'My Rating',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                             ],
                           ),
                         ),
@@ -438,7 +438,7 @@ class HomePage extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   height: 120,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
@@ -452,9 +452,9 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      SizedBox(height: 15),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 12),
+                      const SizedBox(height: 15),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 12),
                         child: Text(
                           'Earn with Glofaa',
                           style: TextStyle(
@@ -466,7 +466,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 14),
+                      const SizedBox(height: 14),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.only(left: 12),
@@ -476,16 +476,16 @@ class HomePage extends StatelessWidget {
                                 context,
                                 'assets/svg_images/refer_earn.svg', // Replace with your SVG asset path
                                 'Refer & Earn',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/share_glofaa.svg', // Replace with your SVG asset path
                                 'Share Glofaa',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                             ],
                           ),
                         ),
@@ -496,7 +496,7 @@ class HomePage extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   height: 120,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
@@ -510,9 +510,9 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      SizedBox(height: 15),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 12),
+                      const SizedBox(height: 15),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 12),
                         child: Text(
                           'Payment Options',
                           style: TextStyle(
@@ -524,7 +524,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 14),
+                      const SizedBox(height: 14),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.only(left: 12),
@@ -534,16 +534,16 @@ class HomePage extends StatelessWidget {
                                 context,
                                 'assets/svg_images/saved_cards.svg', // Replace with your SVG asset path
                                 'Saved cards',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/upi.svg', // Replace with your SVG asset path
                                 'UPI',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                             ],
                           ),
                         ),
@@ -554,7 +554,7 @@ class HomePage extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   height: 120,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
@@ -568,9 +568,9 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      SizedBox(height: 15),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 12),
+                      const SizedBox(height: 15),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 12),
                         child: Text(
                           'Feedback & information',
                           style: TextStyle(
@@ -582,7 +582,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 14),
+                      const SizedBox(height: 14),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.only(left: 12),
@@ -592,16 +592,16 @@ class HomePage extends StatelessWidget {
                                 context,
                                 'assets/svg_images/browse_faqs.svg', // Replace with your SVG asset path
                                 'Browse FAQs',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/terms_policies.svg', // Replace with your SVG asset path
                                 'Terms & Policies',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                             ],
                           ),
                         ),
@@ -612,7 +612,7 @@ class HomePage extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   height: 180,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
@@ -626,9 +626,9 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      SizedBox(height: 15),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 12),
+                      const SizedBox(height: 15),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 12),
                         child: Text(
                           'Glofaa Technology',
                           style: TextStyle(
@@ -640,7 +640,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 14),
+                      const SizedBox(height: 14),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.only(left: 12),
@@ -650,30 +650,30 @@ class HomePage extends StatelessWidget {
                                 context,
                                 'assets/svg_images/about_glofaa.svg', // Replace with your SVG asset path
                                 'About Glofaa',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/contact_us.svg', // Replace with your SVG asset path
                                 'Contact us',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/blog.svg', // Replace with your SVG asset path
                                 'Blog',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/rate_glofaa.svg', // Replace with your SVG asset path
                                 'Rate Glofaa',
-                                MyApp(),
+                                const MyApp(),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                             ],
                           ),
                         ),
@@ -681,7 +681,7 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 19,
                 ),
                 Container(
@@ -692,7 +692,7 @@ class HomePage extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5)),
                     shadows: [
-                      BoxShadow(
+                      const BoxShadow(
                         color: Color(0x3F000000),
                         blurRadius: 4,
                         offset: Offset(0, 4),
@@ -700,7 +700,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       'Log out',
                       style: TextStyle(
@@ -713,10 +713,10 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 19,
                 ),
-                Opacity(
+                const Opacity(
                   opacity: 0.30,
                   child: Text(
                     '7.5.28 R371',
@@ -729,7 +729,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
               ],
             ),
           ],
@@ -803,10 +803,10 @@ class HomePage extends StatelessWidget {
               height: 14,
               width: 14,
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black,
                 fontSize: 14,
                 fontFamily: 'Inter',
@@ -814,10 +814,10 @@ class HomePage extends StatelessWidget {
                 height: 0,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             if (screen != null)
-              Padding(
-                padding: const EdgeInsets.only(right: 12.0),
+              const Padding(
+                padding: EdgeInsets.only(right: 12.0),
                 child: Icon(
                   Icons.arrow_forward_ios,
                   color: Colors.black,
@@ -836,7 +836,7 @@ Widget buildGradientButton(String text) {
     width: 140,
     height: 33,
     decoration: ShapeDecoration(
-      gradient: LinearGradient(
+      gradient: const LinearGradient(
         begin: Alignment(0.00, 1.00),
         end: Alignment(0, -1),
         colors: [Color(0xFFDCF6F8), Color(0x00DCF6F8)],
@@ -845,7 +845,7 @@ Widget buildGradientButton(String text) {
         borderRadius: BorderRadius.circular(5),
       ),
       shadows: [
-        BoxShadow(
+        const BoxShadow(
           color: Color(0xFFace9ef),
           blurRadius: 1,
           offset: Offset(0, 0),
@@ -856,7 +856,7 @@ Widget buildGradientButton(String text) {
     child: Center(
       child: Text(
         text,
-        style: TextStyle(
+        style: const TextStyle(
           color: Colors.black,
           fontSize: 14,
           fontFamily: 'Inter',
@@ -872,7 +872,7 @@ Widget buildButtonSection() {
   return Container(
     width: double.infinity,
     height: 116,
-    decoration: BoxDecoration(
+    decoration: const BoxDecoration(
       color: Colors.white,
       boxShadow: [
         BoxShadow(
@@ -893,7 +893,7 @@ Widget buildButtonSection() {
             buildGradientButton('Wishlist'),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 2,
         ),
         Row(

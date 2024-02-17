@@ -11,9 +11,9 @@ class _SearchBarState extends State<SearchBar> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         left: 12,
-        top: 12,
+        top: 16,
       ),
       child: Container(
         alignment: Alignment.centerLeft,
@@ -23,7 +23,7 @@ class _SearchBarState extends State<SearchBar> {
           color: Colors.white,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
           shadows: [
-            BoxShadow(
+            const BoxShadow(
               color: Color(0x3F000000),
               blurRadius: 4,
               offset: Offset(0, 1),
@@ -33,7 +33,7 @@ class _SearchBarState extends State<SearchBar> {
         ),
         child: Row(
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(
                 left: 13,
               ),
@@ -49,8 +49,8 @@ class _SearchBarState extends State<SearchBar> {
                         width: 20,
                         height: 20,
                       ),
-                      SizedBox(width: 15),
-                      Text(
+                      const SizedBox(width: 15),
+                      const Text(
                         'Search Glofaa.com',
                         style: TextStyle(
                           color: Colors.black,

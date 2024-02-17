@@ -4,7 +4,11 @@ import 'package:glofaa_customer/views/widgets/search_bar.dart'
 import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const MaterialApp(
+      home: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -102,7 +106,7 @@ class MyApp extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(top: 8),
                           child: Text(
-                            'Browsing history is paused until 6 Dec\n2023. Turn your browsing history back\non to have new items you view shown \non this page.',
+                            'Browsing history is turned off. Turn your \nbrowsing history back on to have new \nitems you view shown on this page.',
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 14,

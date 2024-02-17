@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
                       top: 16,
                     ),
                     child: Image.asset(
-                      'assets/images/Left.png',
+                      'assets/images/left.png',
                       height: 24,
                       width: 24,
                     ),

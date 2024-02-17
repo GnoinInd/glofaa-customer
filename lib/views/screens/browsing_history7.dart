@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Image.asset('assets/images/Left.png'),
+                    Image.asset('assets/images/left.png'),
                     SizedBox(
                       width: 9,
                     ),
@@ -82,7 +82,14 @@ class MyApp extends StatelessWidget {
                     SizedBox(
                       width: 30,
                     ),
-                    SvgPicture.asset('assets/svg_images/red_roundswitch.svg'),
+                    Switch(
+                      value: false,
+                      onChanged: (bool newValue) {
+                        // Add your onChanged logic here
+                      },
+                      inactiveTrackColor: Colors.red,
+                      inactiveThumbColor: Colors.white,
+                    ),
                   ],
                 ),
               ],
@@ -105,7 +112,7 @@ class MyApp extends StatelessWidget {
                       top: 16,
                     ),
                     child: Image.asset(
-                      'assets/images/Left.png',
+                      'assets/images/left.png',
                       height: 24,
                       width: 24,
                     ),
