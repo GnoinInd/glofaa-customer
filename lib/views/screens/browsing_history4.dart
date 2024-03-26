@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:glofaa_customer/views/screens/your_cart1.dart';
 import 'package:glofaa_customer/views/widgets/search_bar.dart'
     as CustomSearchBar;
 import 'package:flutter_svg/flutter_svg.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class BrowsingHistory4 extends StatelessWidget {
+  const BrowsingHistory4({super.key});
 
   // This widget is the root of your application.
   @override
@@ -25,10 +23,15 @@ class MyApp extends StatelessWidget {
                       left: 10,
                       top: 16,
                     ),
-                    child: Image.asset(
-                      'assets/images/left.png',
-                      height: 24,
-                      width: 24,
+                    child: GestureDetector(
+                      onTap: () {
+                        Get.to(() => YourCart());
+                      },
+                      child: Image.asset(
+                        'assets/images/left.png',
+                        height: 24,
+                        width: 24,
+                      ),
                     ),
                   ),
                   CustomSearchBar.SearchBar(),

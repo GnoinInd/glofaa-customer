@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:glofaa_customer/views/screens/location_fetch_ui_1.dart';
+import 'package:get/get.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class FirstPage extends StatelessWidget {
+  const FirstPage({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       home: SafeArea(
         child: Scaffold(
           body: Column(
             children: [
-              Expanded(
+              const Expanded(
                 child: Center(
                   child: Text(
                     '      GLOFAA \nTECHNOLOGY',
@@ -33,8 +31,8 @@ class MyApp extends StatelessWidget {
               Container(
                 width: double.infinity,
                 height: 57,
-                decoration: BoxDecoration(color: Color(0xFF5E77B4)),
-                child: Center(
+                decoration: const BoxDecoration(color: Color(0xFF5E77B4)),
+                child: const Center(
                   child: Text(
                     'CONNECT WITH FACEBOOK',
                     style: TextStyle(
@@ -47,7 +45,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Row(
@@ -57,7 +55,7 @@ class MyApp extends StatelessWidget {
                     opacity: 0.20,
                     child: Container(
                       width: 160,
-                      decoration: ShapeDecoration(
+                      decoration: const ShapeDecoration(
                         shape: RoundedRectangleBorder(
                           side: BorderSide(
                             width: 1,
@@ -67,7 +65,7 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Opacity(
+                  const Opacity(
                     opacity: 0.60,
                     child: Text(
                       'OR',
@@ -84,7 +82,7 @@ class MyApp extends StatelessWidget {
                     opacity: 0.20,
                     child: Container(
                       width: 160,
-                      decoration: ShapeDecoration(
+                      decoration: const ShapeDecoration(
                         shape: RoundedRectangleBorder(
                           side: BorderSide(
                             width: 1,
@@ -96,7 +94,7 @@ class MyApp extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Padding(
@@ -108,35 +106,40 @@ class MyApp extends StatelessWidget {
                       width: 152,
                       height: 39,
                       decoration: ShapeDecoration(
-                        color: Color(0xFF018297),
+                        color: const Color(0xFF018297),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5)),
                       ),
                       child: Center(
-                        child: Text(
-                          'LOGIN',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontFamily: 'Inter',
-                            fontWeight: FontWeight.w700,
-                            height: 0,
+                        child: TextButton(
+                          onPressed: () {
+                            Get.to(() => LocationFetchUi1());
+                          },
+                          child: const Text(
+                            'LOGIN',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w700,
+                              height: 0,
+                            ),
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 30,
                     ),
                     Container(
                       width: 152,
                       height: 39,
                       decoration: ShapeDecoration(
-                        color: Color(0xFF00623E),
+                        color: const Color(0xFF00623E),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5)),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           'NEW ACCOUNT',
                           style: TextStyle(
@@ -152,7 +155,7 @@ class MyApp extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
             ],
           ),
         ),

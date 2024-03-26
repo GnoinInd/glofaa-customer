@@ -1,28 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:glofaa_customer/views/screens/your_cart1.dart';
+import 'package:glofaa_customer/views/screens/your_cart2.dart';
 import 'package:glofaa_customer/views/widgets/search_bar.dart'
     as CustomSearchBar;
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:device_preview/device_preview.dart';
 
-void main() => runApp(
-      DevicePreview(
-        enabled: true,
-        builder: (context) => MyApp(), // Wrap your app
-      ),
-    );
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class BrowsingHistory1 extends StatelessWidget {
+  const BrowsingHistory1({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      locale: DevicePreview.locale(context),
-      builder: DevicePreview.appBuilder,
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
-      home: const HomePage(),
+    return const MaterialApp(
+      home: HomePage(),
     );
   }
 }
@@ -39,20 +31,25 @@ class HomePage extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(
+                  padding: const EdgeInsets.only(
                     left: 10,
                     top: 16,
                   ),
-                  child: Image.asset(
-                    'assets/images/left.png',
-                    height: 24,
-                    width: 24,
+                  child: GestureDetector(
+                    onTap: () {
+                      Get.to(() => const YourCart());
+                    },
+                    child: Image.asset(
+                      'assets/images/left.png',
+                      height: 24,
+                      width: 24,
+                    ),
                   ),
                 ),
-                CustomSearchBar.SearchBar(),
+                const CustomSearchBar.SearchBar(),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 28,
             ),
             Row(
@@ -62,7 +59,7 @@ class HomePage extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 12.0),
                   child: Container(
                     alignment: Alignment.centerLeft,
-                    child: Text(
+                    child: const Text(
                       'Your Browsing History',
                       style: TextStyle(
                         color: Colors.black,
@@ -76,11 +73,11 @@ class HomePage extends StatelessWidget {
                 SvgPicture.asset('assets/svg_images/settings.svg'),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 62, left: 12),
+            const Padding(
+              padding: EdgeInsets.only(right: 62, left: 12),
               child: Text(
                 'These items were viewed recently. We use them to personalise recommendations.',
                 style: TextStyle(
@@ -91,14 +88,14 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 12.0),
               child: Container(
                 alignment: Alignment.centerLeft,
-                child: Text(
+                child: const Text(
                   'You have no recently viewed items.',
                   style: TextStyle(
                     color: Colors.black,

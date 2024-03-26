@@ -31,14 +31,14 @@ class MyApp extends StatelessWidget {
                     SizedBox(
                       height: 19,
                     ),
-                    ChooseLanguageContainerWidget2(
-                      image: 'assets/images/image19.png',
+                    ChooseLanguageContainerWidget(
+                      language: 'हिन्दी',
                     ),
                     SizedBox(
                       height: 19,
                     ),
                     ChooseLanguageContainerWidget(
-                      language: 'हिन्दी',
+                      language: 'Hinglish',
                     ),
                     SizedBox(
                       height: 19,

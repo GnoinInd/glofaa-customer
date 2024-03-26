@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:glofaa_customer/views/screens/add_delivery_address.dart';
+import 'package:glofaa_customer/views/screens/profile_page.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class ManageAdresses extends StatelessWidget {
+  const ManageAdresses({super.key});
 
   // This widget is the root of your application.
   @override
@@ -21,7 +20,12 @@ class MyApp extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 12.0, bottom: 17),
                 child: Row(
                   children: [
-                    Image.asset('assets/images/left.png'),
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(() => const ProfilePage());
+                      },
+                      child: Image.asset('assets/images/left.png'),
+                    ),
                     const Padding(
                       padding: EdgeInsets.only(left: 18.0),
                       child: Text(
@@ -57,16 +61,21 @@ class MyApp extends StatelessWidget {
                     )
                   ],
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.only(left: 12.0, top: 15),
-                  child: Text(
-                    '+    Add a new address',
-                    style: TextStyle(
-                      color: Color(0xFF03A0D1),
-                      fontSize: 16,
-                      fontFamily: 'Inter',
-                      fontWeight: FontWeight.w700,
-                      height: 0,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 12.0, top: 15),
+                  child: GestureDetector(
+                    onTap: () {
+                      Get.to(() => const AddDeliveryAddress());
+                    },
+                    child: const Text(
+                      '+    Add a new address',
+                      style: TextStyle(
+                        color: Color(0xFF03A0D1),
+                        fontSize: 16,
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w700,
+                        height: 0,
+                      ),
                     ),
                   ),
                 ),

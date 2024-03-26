@@ -1,26 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:get/get.dart';
+import 'package:glofaa_customer/views/screens/main_bottom_navigation_bar.dart';
+import 'package:glofaa_customer/views/screens/manage_addresses.dart';
+import 'package:glofaa_customer/views/screens/my_wallet1.dart';
 
-void main() => runApp(
-      DevicePreview(
-        enabled: true,
-        builder: (context) => const MyApp(), // Wrap your app
-      ),
-    );
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      locale: DevicePreview.locale(context),
-      builder: DevicePreview.appBuilder,
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
-      home: const HomePage(),
+    return const MaterialApp(
+      home: HomePage(),
     );
   }
 }
@@ -311,35 +304,35 @@ class HomePage extends StatelessWidget {
                                 context,
                                 'assets/svg_images/my_profile.svg', // Replace with your SVG asset path
                                 'Edit profile',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/my_wallet.svg', // Replace with your SVG asset path
                                 'My wallet',
-                                const MyApp(),
+                                const MyWallet1(),
                               ),
                               const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/manage_addresses.svg', // Replace with your SVG asset path
                                 'Manage Addresses',
-                                const MyApp(),
+                                const ManageAdresses(),
                               ),
                               const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/select_languages.svg', // Replace with your SVG asset path
                                 'Select Languages',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/notification_settings.svg', // Replace with your SVG asset path
                                 'Notification Settings',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                             ],
@@ -390,42 +383,42 @@ class HomePage extends StatelessWidget {
                                 context,
                                 'assets/svg_images/scheduled_booking.svg', // Replace with your SVG asset path
                                 'Scheduled Booking',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/my_booking.svg', // Replace with your SVG asset path
                                 'My Booking',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/my_subscription.svg', // Replace with your SVG asset path
                                 'My Subscription',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/reviews.svg', // Replace with your SVG asset path
                                 'Reviews',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/question_answers.svg', // Replace with your SVG asset path
                                 'Question & Answers',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/my_rating.svg', // Replace with your SVG asset path
                                 'My Rating',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                             ],
@@ -476,14 +469,14 @@ class HomePage extends StatelessWidget {
                                 context,
                                 'assets/svg_images/refer_earn.svg', // Replace with your SVG asset path
                                 'Refer & Earn',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/share_glofaa.svg', // Replace with your SVG asset path
                                 'Share Glofaa',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                             ],
@@ -534,14 +527,14 @@ class HomePage extends StatelessWidget {
                                 context,
                                 'assets/svg_images/saved_cards.svg', // Replace with your SVG asset path
                                 'Saved cards',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/upi.svg', // Replace with your SVG asset path
                                 'UPI',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                             ],
@@ -592,14 +585,14 @@ class HomePage extends StatelessWidget {
                                 context,
                                 'assets/svg_images/browse_faqs.svg', // Replace with your SVG asset path
                                 'Browse FAQs',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/terms_policies.svg', // Replace with your SVG asset path
                                 'Terms & Policies',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                             ],
@@ -650,28 +643,28 @@ class HomePage extends StatelessWidget {
                                 context,
                                 'assets/svg_images/about_glofaa.svg', // Replace with your SVG asset path
                                 'About Glofaa',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/contact_us.svg', // Replace with your SVG asset path
                                 'Contact us',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/blog.svg', // Replace with your SVG asset path
                                 'Blog',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                               buildListItem(
                                 context,
                                 'assets/svg_images/rate_glofaa.svg', // Replace with your SVG asset path
                                 'Rate Glofaa',
-                                const MyApp(),
+                                const ProfilePage(),
                               ),
                               const SizedBox(height: 15),
                             ],
@@ -731,49 +724,6 @@ class HomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 15),
               ],
-            ),
-          ],
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          currentIndex: 0,
-          onTap: (int index) {},
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Container(
-                height: 24,
-                child: Image.asset(
-                  'assets/images/home.png',
-                ),
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(
-                height: 24,
-                child: Image.asset(
-                  'assets/images/notifications.png',
-                ),
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(
-                height: 24,
-                child: Image.asset(
-                  'assets/images/cart.png',
-                ),
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(
-                height: 24,
-                child: Image.asset(
-                  'assets/images/profile.png',
-                ),
-              ),
-              label: '',
             ),
           ],
         ),

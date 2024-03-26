@@ -6,13 +6,13 @@ import 'package:flutter_svg/flutter_svg.dart';
 void main() {
   runApp(
     const MaterialApp(
-      home: MyApp(),
+      home: BrowsingHistory8(),
     ),
   );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class BrowsingHistory8 extends StatelessWidget {
+  const BrowsingHistory8({super.key});
 
   // This widget is the root of your application.
   @override

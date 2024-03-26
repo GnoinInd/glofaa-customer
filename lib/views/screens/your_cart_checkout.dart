@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:glofaa_customer/views/widgets/search_bar.dart'
     as CustomSearchBar;
-import 'package:glofaa_customer/views/widgets/custom_bottom_navigation_bar.dart';
+import 'package:glofaa_customer/views/screens/main_bottom_navigation_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../common/my_icons.dart';
 import 'package:dotted_line/dotted_line.dart';

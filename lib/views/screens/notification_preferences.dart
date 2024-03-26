@@ -3,12 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:glofaa_customer/views/widgets/app_bar_with_search_bar.dart';
 import 'package:glofaa_customer/views/widgets/notification_preferences_widget.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class NotificationPreferences extends StatelessWidget {
+  const NotificationPreferences({super.key});
 
   // This widget is the root of your application.
   @override

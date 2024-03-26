@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AddDeliveryAddress extends StatelessWidget {
+  const AddDeliveryAddress({super.key});
 
   // This widget is the root of your application.
   @override
@@ -20,7 +16,7 @@ class MyApp extends StatelessWidget {
               children: [
                 Container(
                   width: 360,
-                  height: 800,
+                  height: 790,
                   clipBehavior: Clip.antiAlias,
                   decoration: const BoxDecoration(color: Colors.white),
                   child: Column(
@@ -840,23 +836,26 @@ class MyApp extends StatelessWidget {
                       ),
                       const Spacer(),
                       Center(
-                        child: Container(
-                          width: 213,
-                          height: 28,
-                          decoration: ShapeDecoration(
-                            color: const Color(0xFF018297),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(5)),
-                          ),
-                          child: const Center(
-                            child: Text(
-                              'Save Address',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.w700,
-                                height: 0,
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 20.0),
+                          child: Container(
+                            width: 213,
+                            height: 28,
+                            decoration: ShapeDecoration(
+                              color: const Color(0xFF018297),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5)),
+                            ),
+                            child: const Center(
+                              child: Text(
+                                'Save Address',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                  fontFamily: 'Inter',
+                                  fontWeight: FontWeight.w700,
+                                  height: 0,
+                                ),
                               ),
                             ),
                           ),

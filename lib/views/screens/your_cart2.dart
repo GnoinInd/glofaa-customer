@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:glofaa_customer/views/screens/browsing_history2.dart';
 import 'package:glofaa_customer/views/widgets/search_bar.dart'
     as CustomSearchBar;
 import 'package:flutter_svg/flutter_svg.dart';
 
-void main() {
-  runApp(
-    const MaterialApp(
-      home: MyApp(),
-    ),
-  );
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key});
+class YourCart2 extends StatelessWidget {
+  const YourCart2({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +14,13 @@ class MyApp extends StatelessWidget {
     WidgetsBinding.instance!.addPostFrameCallback((_) {
       showModalBottomSheet(
         backgroundColor: Colors.transparent,
-        constraints: BoxConstraints(maxHeight: 380),
+        constraints: const BoxConstraints(maxHeight: 380),
         context: context,
         builder: (BuildContext context) {
           return Container(
             padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
             width: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(25), topRight: Radius.circular(25)),
@@ -120,15 +114,20 @@ class MyApp extends StatelessWidget {
                             ),
                           ],
                         ),
-                        child: const Center(
-                          child: Text(
-                            'View your browsing history',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 14,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w700,
-                              height: 0,
+                        child: Center(
+                          child: TextButton(
+                            onPressed: () {
+                              Get.to(() => const BrowsingHistory2());
+                            },
+                            child: const Text(
+                              'View your browsing history',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w700,
+                                height: 0,
+                              ),
                             ),
                           ),
                         ),

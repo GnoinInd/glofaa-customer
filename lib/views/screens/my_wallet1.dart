@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:glofaa_customer/views/screens/my_wallet2.dart';
+import 'package:glofaa_customer/views/screens/profile_page.dart';
 import 'package:glofaa_customer/views/widgets/app_bar_without_search_bar.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class MyWallet1 extends StatefulWidget {
+  const MyWallet1({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<MyWallet1> createState() => _MyWallet1State();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyWallet1State extends State<MyWallet1> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,11 @@ class _MyAppState extends State<MyApp> {
         child: Scaffold(
           body: Column(
             children: [
-              AppBarWithoutSearchBar(title: 'My Wallet'),
+              GestureDetector(
+                  onTap: () {
+                    Get.to(() => ProfilePage());
+                  },
+                  child: AppBarWithoutSearchBar(title: 'My Wallet')),
               Container(
                 width: double.infinity,
                 height: 159,
@@ -203,7 +206,11 @@ class _MyAppState extends State<MyApp> {
                         const Spacer(),
                         Padding(
                           padding: const EdgeInsets.only(right: 23.0),
-                          child: Image.asset('assets/images/Forward.png'),
+                          child: GestureDetector(
+                              onTap: () {
+                                Get.to(() => MyWallet2());
+                              },
+                              child: Image.asset('assets/images/Forward.png')),
                         ),
                       ],
                     ),

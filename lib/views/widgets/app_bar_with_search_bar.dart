@@ -15,16 +15,6 @@ class _AppBarWithSearchBarState extends State<AppBarWithSearchBar> {
     return Container(
       width: double.infinity,
       height: 60,
-      decoration: const BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Color(0x3F000000),
-            blurRadius: 4,
-            offset: Offset(0, 1),
-            spreadRadius: 0,
-          )
-        ],
-      ),
       child: Padding(
         padding: const EdgeInsets.only(left: 12.0, top: 15),
         child: Row(

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:glofaa_customer/views/screens/browsing_history3.dart';
+import 'package:glofaa_customer/views/screens/browsing_history4.dart';
+import 'package:glofaa_customer/views/screens/your_cart1.dart';
 import 'package:glofaa_customer/views/widgets/search_bar.dart'
     as CustomSearchBar;
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../common/my_icons.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class BrowsingHistory2 extends StatelessWidget {
+  const BrowsingHistory2({super.key});
 
   // This widget is the root of your application.
   @override
@@ -26,10 +26,15 @@ class MyApp extends StatelessWidget {
                       left: 10,
                       top: 16,
                     ),
-                    child: Image.asset(
-                      'assets/images/left.png',
-                      height: 24,
-                      width: 24,
+                    child: GestureDetector(
+                      onTap: () {
+                        Get.to(() => YourCart());
+                      },
+                      child: Image.asset(
+                        'assets/images/left.png',
+                        height: 24,
+                        width: 24,
+                      ),
                     ),
                   ),
                   CustomSearchBar.SearchBar(),
@@ -57,7 +62,12 @@ class MyApp extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 195.0),
-                    child: SvgPicture.asset('assets/svg_images/settings.svg'),
+                    child: GestureDetector(
+                        onTap: () {
+                          Get.to(() => BrowsingHistory3());
+                        },
+                        child:
+                            SvgPicture.asset('assets/svg_images/settings.svg')),
                   ),
                 ],
               ),
@@ -84,7 +94,7 @@ class MyApp extends StatelessWidget {
                 height: 108,
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Color(0x3F000000),
                       blurRadius: 4,
@@ -163,12 +173,12 @@ class MyApp extends StatelessWidget {
                         SizedBox(height: 6),
                         Container(
                           width: 100,
-                          height: 22,
+                          height: 30,
                           decoration: ShapeDecoration(
                             color: Color(0xFF018297),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5)),
-                            shadows: [
+                            shadows: const [
                               BoxShadow(
                                 color: Color(0x3F000000),
                                 blurRadius: 4,
@@ -178,14 +188,18 @@ class MyApp extends StatelessWidget {
                             ],
                           ),
                           child: Center(
-                              child: Text(
-                            'Remove',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w700,
-                              height: 0,
+                              child: TextButton(
+                            onPressed: () {
+                              Get.to(() => BrowsingHistory4());
+                            },
+                            child: Text(
+                              'Remove',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w700,
+                              ),
                             ),
                           )),
                         ),

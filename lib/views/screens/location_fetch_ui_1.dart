@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:glofaa_customer/views/screens/location_fetch_ui_2.dart';
+import 'package:get/get.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class LocationFetchUi1 extends StatelessWidget {
+  const LocationFetchUi1({super.key});
 
   // This widget is the root of your application.
   @override
@@ -17,7 +15,7 @@ class MyApp extends StatelessWidget {
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 'Hi, nice to meet you!',
                 style: TextStyle(
                   color: Colors.black,
@@ -27,10 +25,10 @@ class MyApp extends StatelessWidget {
                   height: 0,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 7,
               ),
-              Text(
+              const Text(
                 'See services around',
                 style: TextStyle(
                   color: Colors.black,
@@ -40,7 +38,7 @@ class MyApp extends StatelessWidget {
                   height: 0,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 48,
               ),
               Stack(
@@ -48,7 +46,7 @@ class MyApp extends StatelessWidget {
                   Container(
                     width: double.infinity,
                     height: 250,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage("assets/images/map_image.png"),
                         opacity: 0.4,
@@ -62,7 +60,7 @@ class MyApp extends StatelessWidget {
                     child: Container(
                       width: 64,
                       height: 55,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage("assets/images/location.png"),
                           fit: BoxFit.contain,
@@ -72,12 +70,12 @@ class MyApp extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               Container(
                 width: 250,
                 height: 33,
                 decoration: ShapeDecoration(
-                  color: Color(0xFF018297),
+                  color: const Color(0xFF018297),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5)),
                 ),
@@ -87,26 +85,31 @@ class MyApp extends StatelessWidget {
                     SvgPicture.asset(
                       'assets/svg_images/my_location_icon.svg',
                     ),
-                    SizedBox(width: 5),
-                    Text(
-                      'Your current location',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 12,
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.w700,
-                        height: 0,
+                    const SizedBox(width: 5),
+                    TextButton(
+                      onPressed: () {
+                        Get.to(() => LocationFetchUi2());
+                      },
+                      child: const Text(
+                        'Your current location',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w700,
+                          height: 0,
+                        ),
                       ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Container(
                 width: 250,
                 height: 33,
                 decoration: ShapeDecoration(
-                  color: Color(0xFFD9D9D9),
+                  color: const Color(0xFFD9D9D9),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5)),
                 ),
@@ -114,8 +117,8 @@ class MyApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SvgPicture.asset('assets/svg_images/search.svg'),
-                    SizedBox(width: 8),
-                    Text(
+                    const SizedBox(width: 8),
+                    const Text(
                       'Some other location',
                       style: TextStyle(
                         color: Colors.black,
